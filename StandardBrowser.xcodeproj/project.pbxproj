@@ -14,6 +14,7 @@
 		32B033341B5A23AF0076647B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B033331B5A23AF0076647B /* Images.xcassets */; };
 		32B033371B5A23AF0076647B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B033351B5A23AF0076647B /* LaunchScreen.xib */; };
 		32B033431B5A23AF0076647B /* StandardBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B033421B5A23AF0076647B /* StandardBrowserTests.m */; };
+		32B0334D1B5A25140076647B /* Description in Resources */ = {isa = PBXBuildFile; fileRef = 32B0334C1B5A25140076647B /* Description */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		32B0333C1B5A23AF0076647B /* StandardBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StandardBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B033411B5A23AF0076647B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B033421B5A23AF0076647B /* StandardBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StandardBrowserTests.m; sourceTree = "<group>"; };
+		32B0334C1B5A25140076647B /* Description */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Description; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				32B0332B1B5A23AF0076647B /* AppDelegate.m */,
 				32B0332D1B5A23AF0076647B /* ViewController.h */,
 				32B0332E1B5A23AF0076647B /* ViewController.m */,
+				32B0334C1B5A25140076647B /* Description */,
 				32B033301B5A23AF0076647B /* Main.storyboard */,
 				32B033331B5A23AF0076647B /* Images.xcassets */,
 				32B033351B5A23AF0076647B /* LaunchScreen.xib */,
@@ -202,6 +205,7 @@
 				32B033321B5A23AF0076647B /* Main.storyboard in Resources */,
 				32B033371B5A23AF0076647B /* LaunchScreen.xib in Resources */,
 				32B033341B5A23AF0076647B /* Images.xcassets in Resources */,
+				32B0334D1B5A25140076647B /* Description in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
