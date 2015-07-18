@@ -1,25 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CEx-Rn-OGT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--StandardBrowser-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcf-FS-2qE">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NdW-42-LYo"/>
+                                    <barButtonItem title="＜" id="aIe-xJ-pLe">
+                                        <connections>
+                                            <action selector="onTapBrowserBackButton:" destination="vXZ-lx-hvc" id="R7l-he-o14"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iJC-gO-rU9"/>
+                                    <barButtonItem title="＞" id="HmL-4f-vc6">
+                                        <connections>
+                                            <action selector="onTapBrowserForwardButton:" destination="vXZ-lx-hvc" id="eDy-sD-7uJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1qB-yg-MuF"/>
+                                    <barButtonItem style="plain" systemItem="refresh" id="UBb-JN-oyT">
+                                        <connections>
+                                            <action selector="onTapRefreshButton:" destination="vXZ-lx-hvc" id="Dib-B8-FcM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TDw-hG-Wcg"/>
+                                    <barButtonItem systemItem="stop" id="h6V-3C-QQ9">
+                                        <connections>
+                                            <action selector="onTapStopButton:" destination="vXZ-lx-hvc" id="aaH-gU-agY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="98n-gm-AcY"/>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afj-ND-neo">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dcf-FS-2qE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0Rh-7b-lYw"/>
+                            <constraint firstItem="afj-ND-neo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IS6-Nd-9DG"/>
+                            <constraint firstAttribute="trailing" secondItem="dcf-FS-2qE" secondAttribute="trailing" id="KuB-ue-7e9"/>
+                            <constraint firstItem="dcf-FS-2qE" firstAttribute="top" secondItem="afj-ND-neo" secondAttribute="bottom" id="OwW-qA-42P"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dcf-FS-2qE" secondAttribute="bottom" id="Rih-Ni-HYf"/>
+                            <constraint firstItem="afj-ND-neo" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Tfb-C3-1Nb"/>
+                            <constraint firstAttribute="trailing" secondItem="afj-ND-neo" secondAttribute="trailing" id="nvI-0E-eyr"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="StandardBrowser" id="n4A-Sq-f0l"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="browserBackButton" destination="aIe-xJ-pLe" id="Mh6-oo-ERM"/>
+                        <outlet property="browserForwardButton" destination="HmL-4f-vc6" id="wqp-Px-Lv3"/>
+                        <outlet property="stopButton" destination="h6V-3C-QQ9" id="hzZ-PU-aSI"/>
+                        <outlet property="webView" destination="afj-ND-neo" id="Jt4-rb-W9q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="35" y="492"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WbB-XI-6yw">
+            <objects>
+                <navigationController id="CEx-Rn-OGT" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xw9-eq-M5V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Nec-v2-yRp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l9S-Oq-Aad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-347" y="492"/>
         </scene>
     </scenes>
 </document>
