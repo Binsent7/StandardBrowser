@@ -42,7 +42,7 @@
     self.webView.delegate = self;
     
     // リクエスト作成
-    NSString *requestURLString  = @"http://google.co.jp";
+    NSString *requestURLString  = @"http://google.co.jp/";
     NSURL *requestUrl           = [NSURL URLWithString:requestURLString];
     
     // webViewページを作成したリクエストでロード
