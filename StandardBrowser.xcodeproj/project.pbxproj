@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		326EBF3E1C03274400DD8360 /* AddBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EBF3D1C03274400DD8360 /* AddBookmarkViewController.m */; };
+		326EBF411C03275700DD8360 /* BookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326EBF401C03275700DD8360 /* BookmarkViewController.m */; };
 		32B033291B5A23AF0076647B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B033281B5A23AF0076647B /* main.m */; };
 		32B0332C1B5A23AF0076647B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B0332B1B5A23AF0076647B /* AppDelegate.m */; };
 		32B0332F1B5A23AF0076647B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B0332E1B5A23AF0076647B /* ViewController.m */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		326EBF3C1C03274400DD8360 /* AddBookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBookmarkViewController.h; sourceTree = "<group>"; };
+		326EBF3D1C03274400DD8360 /* AddBookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBookmarkViewController.m; sourceTree = "<group>"; };
+		326EBF3F1C03275700DD8360 /* BookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkViewController.h; sourceTree = "<group>"; };
+		326EBF401C03275700DD8360 /* BookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkViewController.m; sourceTree = "<group>"; };
 		32B033231B5A23AF0076647B /* StandardBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StandardBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32B033271B5A23AF0076647B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B033281B5A23AF0076647B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +93,10 @@
 				32B0332B1B5A23AF0076647B /* AppDelegate.m */,
 				32B0332D1B5A23AF0076647B /* ViewController.h */,
 				32B0332E1B5A23AF0076647B /* ViewController.m */,
+				326EBF3C1C03274400DD8360 /* AddBookmarkViewController.h */,
+				326EBF3D1C03274400DD8360 /* AddBookmarkViewController.m */,
+				326EBF3F1C03275700DD8360 /* BookmarkViewController.h */,
+				326EBF401C03275700DD8360 /* BookmarkViewController.m */,
 				32B0334C1B5A25140076647B /* Description */,
 				32B033301B5A23AF0076647B /* Main.storyboard */,
 				32B033331B5A23AF0076647B /* Images.xcassets */,
@@ -223,6 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326EBF3E1C03274400DD8360 /* AddBookmarkViewController.m in Sources */,
+				326EBF411C03275700DD8360 /* BookmarkViewController.m in Sources */,
 				32B0332F1B5A23AF0076647B /* ViewController.m in Sources */,
 				32B0332C1B5A23AF0076647B /* AppDelegate.m in Sources */,
 				32B033291B5A23AF0076647B /* main.m in Sources */,
@@ -420,6 +432,7 @@
 				32B033481B5A23AF0076647B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		32B033491B5A23AF0076647B /* Build configuration list for PBXNativeTarget "StandardBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +441,7 @@
 				32B0334B1B5A23AF0076647B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

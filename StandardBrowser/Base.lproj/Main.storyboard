@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--StandardBrowser-->
+        <!--ブラウザアプリ-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -45,6 +45,18 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="98n-gm-AcY"/>
+                                    <barButtonItem systemItem="action" id="adu-0M-v5p">
+                                        <connections>
+                                            <segue destination="zDj-SA-fag" kind="show" id="4lb-KT-cTt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="IWR-vb-X5c"/>
+                                    <barButtonItem systemItem="bookmarks" id="8ta-rE-YWX">
+                                        <connections>
+                                            <segue destination="of5-4S-7SL" kind="show" id="JXb-aJ-sTm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5VL-vd-INm"/>
                                 </items>
                             </toolbar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afj-ND-neo">
@@ -63,7 +75,7 @@
                             <constraint firstAttribute="trailing" secondItem="afj-ND-neo" secondAttribute="trailing" id="nvI-0E-eyr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="StandardBrowser" id="n4A-Sq-f0l"/>
+                    <navigationItem key="navigationItem" title="ブラウザアプリ" id="n4A-Sq-f0l"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="browserBackButton" destination="aIe-xJ-pLe" id="Mh6-oo-ERM"/>
@@ -75,6 +87,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="35" y="492"/>
+        </scene>
+        <!--ブックマーク-->
+        <scene sceneID="5Cu-r5-lNQ">
+            <objects>
+                <viewController id="hMZ-as-jLD" customClass="BookmarkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tOX-xL-EMa"/>
+                        <viewControllerLayoutGuide type="bottom" id="mBa-Se-ROx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fqc-oT-0nO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNp-Fj-aF7">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="閉じる" id="1QF-Zb-DUb">
+                                        <connections>
+                                            <action selector="onTapCloseButton:" destination="hMZ-as-jLD" id="bbT-kf-zsX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mNp-Fj-aF7" firstAttribute="leading" secondItem="fqc-oT-0nO" secondAttribute="leading" id="WXg-Zf-e4z"/>
+                            <constraint firstAttribute="trailing" secondItem="mNp-Fj-aF7" secondAttribute="trailing" id="eTL-p3-zbH"/>
+                            <constraint firstItem="mBa-Se-ROx" firstAttribute="top" secondItem="mNp-Fj-aF7" secondAttribute="bottom" id="wJZ-ps-wCM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ブックマーク" id="3Wz-Zg-zpd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HhA-Ev-Qd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="1234"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6by-Rk-j06">
+            <objects>
+                <navigationController id="zDj-SA-fag" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4CP-nu-uHa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8xK-ms-ep2" kind="relationship" relationship="rootViewController" id="TXy-Fa-mDU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLV-OR-F8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="492"/>
+        </scene>
+        <!--ブックマークを追加-->
+        <scene sceneID="sTI-3n-BqA">
+            <objects>
+                <viewController id="8xK-ms-ep2" customClass="AddBookmarkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U2m-97-iui"/>
+                        <viewControllerLayoutGuide type="bottom" id="2in-2B-q6d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5OJ-Jb-f2e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5qH-5K-wmA">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5qH-5K-wmA" firstAttribute="top" secondItem="U2m-97-iui" secondAttribute="bottom" id="SXq-xi-8lN"/>
+                            <constraint firstItem="2in-2B-q6d" firstAttribute="top" secondItem="5qH-5K-wmA" secondAttribute="bottom" id="Y7e-8r-rEU"/>
+                            <constraint firstItem="5qH-5K-wmA" firstAttribute="leading" secondItem="5OJ-Jb-f2e" secondAttribute="leading" id="ZFX-Lc-hMD"/>
+                            <constraint firstAttribute="trailing" secondItem="5qH-5K-wmA" secondAttribute="trailing" id="rVl-je-AC1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ブックマークを追加" id="6I7-Ps-y7F">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="jyo-GU-dta">
+                            <connections>
+                                <action selector="onTapCancelButton:" destination="8xK-ms-ep2" id="xqo-x2-cVb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="T4W-rK-Yuf">
+                            <connections>
+                                <action selector="onTapSaveButton:" destination="8xK-ms-ep2" id="TpS-yK-DZ1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdc-5v-50c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="492"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FN0-NV-yXz">
+            <objects>
+                <navigationController id="of5-4S-7SL" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NfZ-Vt-iwA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hMZ-as-jLD" kind="relationship" relationship="rootViewController" id="1Jv-RE-c5V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9S-jw-5Jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="1234"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WbB-XI-6yw">
